@@ -3,87 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 検索避け：検索エンジンにこのページを載せない指定 -->
 <meta name="robots" content="noindex, nofollow">
-<title>会期名 ｜ S_R gallery</title>
+<title>刻時空 ｜ S_R gallery</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F5F5F3;
-    --ink:#141414;
-    --grey:#6E6E6E;
-    --grey-soft:#8A8A8A;
-    --line:#D4D4D0;
-    --mincho:"Zen Old Mincho", serif;
-    --gothic:"Zen Kaku Gothic New", sans-serif;
+    --paper:#F5F5F3;--ink:#141414;--grey:#6E6E6E;--grey-soft:#8A8A8A;--line:#D4D4D0;
+    --mincho:"Zen Old Mincho", serif;--gothic:"Zen Kaku Gothic New", sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
-  body{
-    background:var(--paper);color:var(--ink);
-    font-family:var(--gothic);line-height:1.7;
-    -webkit-font-smoothing:antialiased;padding:0 22px 56px;
-  }
+  body{background:var(--paper);color:var(--ink);font-family:var(--gothic);line-height:1.7;-webkit-font-smoothing:antialiased;padding:0 22px 56px;}
   .wrap{max-width:480px;margin:0 auto}
-
-  /* ---- header (テキストのみ・ロゴは下部) ---- */
   header{padding:40px 0 20px}
-  .show-title{
-    font-family:var(--mincho);font-weight:600;font-size:34px;
-    letter-spacing:.22em;text-indent:.22em;color:var(--ink);line-height:1.25;
-  }
-  .show-meta{
-    font-family:var(--gothic);font-size:14px;color:var(--grey);
-    letter-spacing:.08em;margin-top:12px;
-  }
+  .show-title{font-family:var(--mincho);font-weight:600;font-size:25px;letter-spacing:.22em;text-indent:.22em;color:var(--ink);line-height:1.25;}
+  .show-meta{font-family:var(--gothic);font-size:14px;color:var(--grey);letter-spacing:.08em;margin-top:12px;}
   .rule{width:34px;height:2px;background:var(--ink);margin:20px 0 0}
-
-  /* ---- work ---- */
   .work{padding:22px 0;border-top:1px solid var(--line);scroll-margin-top:14px}
   .work:first-of-type{border-top:none;padding-top:8px}
-  .no{
-    font-family:var(--mincho);font-size:13px;color:var(--grey-soft);
-    letter-spacing:.16em;display:block;margin-bottom:8px;
-  }
-  .artist{
-    font-family:var(--gothic);font-weight:700;font-size:18px;
-    letter-spacing:.1em;color:var(--ink);margin-bottom:4px;
-  }
-  .title{
-    font-family:var(--mincho);font-weight:500;font-size:25px;
-    line-height:1.45;color:var(--ink);margin-bottom:14px;
-  }
-  .desc{
-    font-family:var(--gothic);font-size:16px;color:var(--ink);line-height:1.9;
-  }
-
-  /* ---- bio（折りたたみ・タップで開く。長い略歴でもスクロールが伸びない） ---- */
+  .no{font-family:var(--mincho);font-size:13px;color:var(--grey-soft);letter-spacing:.16em;display:block;margin-bottom:8px;}
+  .artist{font-family:var(--gothic);font-weight:700;font-size:18px;letter-spacing:.1em;color:var(--ink);margin-bottom:4px;}
+  .title{font-family:var(--mincho);font-weight:500;font-size:25px;line-height:1.45;color:var(--ink);margin-bottom:14px;}
+  .desc{font-family:var(--gothic);font-size:16px;color:var(--ink);line-height:1.9;}
   details.bio{margin-top:16px;border-left:3px solid var(--ink);padding-left:15px}
-  details.bio summary{
-    font-family:var(--gothic);font-size:14px;font-weight:700;color:var(--ink);
-    letter-spacing:.08em;cursor:pointer;list-style:none;
-    display:flex;align-items:center;gap:8px;
-  }
+  details.bio summary{font-family:var(--gothic);font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.08em;cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;}
   details.bio summary::-webkit-details-marker{display:none}
-  details.bio summary::before{
-    content:"＋";color:var(--grey);font-size:15px;font-weight:400;
-  }
-  details.bio[open] summary::before{content:"－"}
-  .bio-body{
-    font-family:var(--gothic);font-size:14px;color:var(--grey);
-    line-height:1.85;margin-top:10px;
-  }
-
-  /* 差し替え目印（本番では消してOK） */
-  .ph{
-    background:rgba(20,20,20,.05);border:1px dashed rgba(20,20,20,.3);
-    border-radius:4px;padding:2px 7px;font-size:12px;color:var(--grey);
-    letter-spacing:.04em;display:inline-block;margin-bottom:6px;
-  }
-
-  /* ---- footer：ロゴのみ ---- */
+  details.bio summary::before{content:"\FF0B";color:var(--grey);font-size:15px;font-weight:400;}
+  details.bio[open] summary::before{content:"\FF0D"}
+  .bio-body{font-family:var(--gothic);font-size:14px;color:var(--grey);line-height:1.85;margin-top:10px;}
   footer{margin-top:34px;padding-top:24px;border-top:1px solid var(--line);text-align:center}
   footer img{width:132px;height:auto;opacity:.92}
 </style>
@@ -91,38 +40,56 @@
 <body>
 <div class="wrap">
 
-  <!-- ▼ 会期見出し（会期名と会期を差し替え） -->
   <header>
-    <h1 class="show-title">会期名</h1>
-    <div class="show-meta">0000.0.0 — 0.0</div>
+    <h1 class="show-title">刻時空</h1>
+    <div class="show-meta">2026.7.26 — 8.8</div>
     <div class="rule"></div>
   </header>
 
   <main>
 
-    <!-- ▼ 作品1つ分。増やすときはこの <section>…</section> を丸ごとコピー。 -->
     <section class="work">
       <span class="no">01</span>
-      <div class="artist"><span class="ph">作家名</span></div>
-      <div class="title"><span class="ph">作品名</span></div>
-      <div class="desc"><span class="ph">作品解説</span><br>ここに作品解説が入ります。</div>
+      <div class="artist">大庭 孝文</div>
+      <div class="title">フォールスメモリー</div>
+      <div class="desc">記憶は、見るたびに少しずつ書き換えられていく。フラッシュを焚いた一瞬の光が、かえって本当の輪郭を曖昧にする——そんな記憶のあやうさを、銀と和紙の層の中に閉じ込めた。（※これはサンプルの文章です）</div>
       <details class="bio">
         <summary>作家略歴</summary>
-        <div class="bio-body"><span class="ph">作家略歴</span><br>ここに作家略歴が入ります。タップで開閉します。</div>
+        <div class="bio-body">1900年 ○○県生まれ。○○大学美術学部卒業。国内外で個展・グループ展を多数開催。近年は記憶と物質性をテーマに制作を続けている。（※これはサンプルの略歴です。実際にはもっと長い文章が入ります）</div>
       </details>
     </section>
 
     <section class="work">
       <span class="no">02</span>
-      <div class="artist"><span class="ph">作家名</span></div>
-      <div class="title"><span class="ph">作品名</span></div>
-      <div class="desc"><span class="ph">作品解説</span><br>ここに作品解説が入ります。</div>
+      <div class="artist">藤田 貴也</div>
+      <div class="title">a girl</div>
+      <div class="desc">ふとした横顔に宿る、名づけようのない感情。少女という存在の、強さと危うさが同居する一瞬をとらえた。（※これはサンプルの文章です）</div>
       <details class="bio">
         <summary>作家略歴</summary>
-        <div class="bio-body"><span class="ph">作家略歴</span><br>ここに作家略歴が入ります。タップで開閉します。</div>
+        <div class="bio-body">1990年 ○○県生まれ。○○大学大学院修了。写実的な人物表現で知られ、国内の主要な公募展・企画展に出品。（※これはサンプルの略歴です）</div>
       </details>
     </section>
-    <!-- ▲ 作品ここまで -->
+
+    <section class="work">
+      <span class="no">03</span>
+      <div class="artist">篠原 愛</div>
+      <div class="title">静物（猫の頭骨）<br>Still life（Cat skull）</div>
+      <details class="bio">
+        <summary>作家略歴</summary>
+        <div class="bio-body">1900年 ○○県生まれ。緻密な鉛筆描写と幻想的な世界観で知られる。（※この作品は解説なしの表示例です。作品名と略歴だけが並びます）</div>
+      </details>
+    </section>
+
+    <section class="work">
+      <span class="no">04</span>
+      <div class="artist">山口 英紀</div>
+      <div class="title">往来 ～名港中央IC～</div>
+      <div class="desc">高速道路の無機質な構造物を、水墨の濃淡だけで描き出す。都市の風景に潜む静けさと時間の流れを見つめた一作。（※これはサンプルの文章です）</div>
+      <details class="bio">
+        <summary>作家略歴</summary>
+        <div class="bio-body">1900年 ○○県生まれ。現代水墨の旗手として国内外で高い評価を受ける。（※これはサンプルの略歴です）</div>
+      </details>
+    </section>
 
   </main>
 
